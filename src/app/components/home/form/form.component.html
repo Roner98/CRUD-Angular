@@ -1,0 +1,33 @@
+
+<form (ngSubmit)="submit()" [formGroup]="formulario" #f="ngForm">
+
+  <input type="hidden" formControlName="id">
+  <label for="">Title</label>
+  <input type="text" class="input-text" placeholder="Digite o titlo" formControlName="title" required="">
+
+
+  <div *ngIf="(title?.invalid && title?.touched ) || title?.dirty" >
+    <app-message-error
+   *ngIf="title?.errors?.['required']"
+    message="Campo obrigatório"
+    ></app-message-error>
+  </div>
+
+  <label for="">description</label>
+  <input type="text" class="input-text" placeholder="descreva o trabalho" formControlName="description" required>
+
+
+  <div *ngIf="(description?.invalid && description?.touched ) || description?.dirty" >
+    <app-message-error
+   *ngIf="description?.errors?.['required']"
+
+    message="Campo obrigatório"
+    ></app-message-error>
+  </div>
+
+  <label for="">file</label>
+  <input type="file" class="inout-file" (change)="onFileSelected($event)">
+
+gi
+  <button class="btn-enviar" [disabled]="f.invalid" type="submit">Enviar</button>
+</form>

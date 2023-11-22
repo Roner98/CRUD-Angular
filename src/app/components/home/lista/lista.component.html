@@ -1,0 +1,20 @@
+<div class="lista" *ngIf="nails else noNails">
+  <h3>Veja os trabalhos de nossa <span>Nails</span></h3>
+  <div class="search-container">
+    <form >
+      <input type="text" placeholder=" busque por um trabalho" (input)="search($event)">
+    </form>
+  </div>
+  <div class="container">
+    <div class="lista-itens" *ngFor="let nail of nails">
+      <img src="{{api}}uploads/{{nail.image}}" alt="">
+      <h1>{{nail.title}}</h1>
+      <a routerLink="/descricao/{{nail.id}}">Edit:</a>
+    </div>
+  </div>
+
+</div>
+
+<ng-template #noNails>
+  <h2>No Nails</h2>
+</ng-template>

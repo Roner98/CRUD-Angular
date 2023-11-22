@@ -1,0 +1,12 @@
+<div class="descricao" *ngIf="nails">
+  <h2>{{nails.title}}</h2>
+  <img src="{{api}}uploads/{{nails.image}}" alt="">
+  <div class="about">
+    <h3>Sobre:</h3>
+    <p>{{nails.description}}</p>
+  </div>
+  <div class="action">
+    <a routerLink="/nails/edit/{{nails.id}}" class="btn-edit">Edit</a>
+    <button class="btn-remove" (click)="removeRendller(nails.id!)">Remove</button>
+  </div>
+</div>

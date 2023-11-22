@@ -1,0 +1,4 @@
+<div *ngIf="nails">
+<h1>Edite o <span>{{nails.title}}</span> </h1>
+<app-form (onSubimit)="editRendller($event)" [nailsForm]="nails"></app-form>
+</div>

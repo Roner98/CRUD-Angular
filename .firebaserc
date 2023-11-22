@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "nailsworck": {
+      "hosting": {
+        "nailsWock": [
+          "nailsworck"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "nailsworck"
+  }
+}

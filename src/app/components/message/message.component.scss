@@ -1,0 +1,24 @@
+.message{
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  width: 50%;
+  margin-left: 50%;
+  left: -25%;
+  background-color: #FFF;
+  top: 4em;
+  border: 4px solid #733426;
+  padding: 1.3em;
+}
+h1{
+font-size: 20px;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+color: #733426;
+}
+.message-header{
+  display: flex;
+  justify-content: space-between;
+}
+p{
+  color:#D9C7C5;
+}
